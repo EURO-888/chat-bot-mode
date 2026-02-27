@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8" />
+    <title>FB Battery - LINE Chat Mode Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <h1>LINE Chat Mode Admin</h1>
+            <p class="subtitle">ค้นหาและสลับโหมดคุยกับลูกค้า (BOT / ADMIN)</p>
+        </header>
+
+        <section class="search-section">
+            <label for="keyword" class="field-label">ค้นหาลูกค้า</label>
+            <div class="search-row">
+                <input
+                    id="keyword"
+                    type="text"
+                    class="text-input"
+                    placeholder="ค้นหาจากชื่อ LINE หรือ line_user_id" />
+                <button id="searchBtn" class="btn primary">ค้นหา</button>
+            </div>
+        </section>
+
+        <section class="result-section">
+            <div class="toolbar">
+                <span id="summary" class="summary-text">ยังไม่มีผลการค้นหา</span>
+                <span id="loading" class="loading hidden">กำลังโหลด...</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>LINE User ID</th>
+                            <th>ชื่อ LINE</th>
+                            <th>โหมดปัจจุบัน</th>
+                            <th>อัพเดทล่าสุด</th>
+                            <th>สลับโหมด</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultBody">
+                        <!-- rows will be rendered by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <small>ทดสอบเฉพาะภายในสำหรับ FB Battery</small>
+        </footer>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
+
